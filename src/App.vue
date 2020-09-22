@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <encabezado/>
+    <router-view/>
+    <p-d-p/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PDP from '@/componentes/disenno/PieDePagina'
+import Encabezado from '@/componentes/disenno/Encabezado'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PDP, // Pié de página
+    Encabezado
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import '~bulma/css/bulma.min.css';
+
+.mover-enter-active, .mover-leave-active {
+  transform: translateX(0);
+  transition: all 0.5s linear;
+}
+
+.mover-enter, .mover-leave-to {
+  transform: translateX(100%);
 }
 </style>
