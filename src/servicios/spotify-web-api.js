@@ -1,7 +1,7 @@
 import ServicioSpotifyWebAPI from '@/servicios/configuracion'
 
 const obtenerTokenSpotifyWebAPI = async () => {
-  const resultado = await fetch(ServicioSpotifyWebAPI.urlFlujoDeCredencialesDelCliente, {
+  const resultado = await fetch(ServicioSpotifyWebAPI.urlParaCredencialesDelCliente, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
